@@ -1,0 +1,58 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+   
+    <div class="navbar-header">
+      <a class="navbar-brand bran"  routerLink="/home/{{username}}">Instantgram</a>
+      
+    </div>
+     </div>
+
+</nav>
+<div class="container">
+<div class="row">
+	
+</div>
+
+<!-- <div class="card col-md-12 col-xs-8 row">
+ 	<a (click)="tampilan()" name="postingan" id="postingan" class="postingan">                
+	 	<img src={{tampil}} id="displaypic"  name="displaypic" style="width: 300px; height: 300px; border: 1px solid black;" />
+	</a>
+	<br>
+	<br>
+
+	<p><b>{{username}}</b>:{{caption}}</p>
+	<p>{{tanggal}}</p>
+	<p><a>Suka</a> : {{like}}</p>
+</div> -->
+
+<div class="row">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <h3>{{username}}</h3>
+      <a  class="thumbnail">
+      	<img src={{tampil}} style="width: 300px; height: 300px;">
+      </a>
+       <p *ngIf="showing"><a (click)="prev()" class="btn btn-default" role="button">Back</a>
+        <a (click)="next()" class="btn btn-primary" role="button">Next</a></p>
+      <div class="caption">
+        <h4><b>{{username}}</b>:{{caption}}</h4>
+        {{tanggal}}
+        <br>
+        <br>
+        <p class="fonts"><a (click)="setLike()" class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></a> : {{like}}</p>
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+<ul class="list-group">
+  <li class="list-group-item list-group-item-info">Komentar</li>
+  <li class="list-group-item" *ngFor="let komen of komens"><b>{{komen.username}} : </b>{{komen.isi_komen}}</li>
+  <!-- <li class="list-group-item" *ngIf="isihasilkomen"><b>{{isiuserkomen}} : </b>{{isihasilkomen}}</li> -->
+  <li class="list-group-item"><div class="form-group">
+          <input (input)="checkInputKomen($event)" type="text" class="form-control" placeholder="Masukan Komen">
+        </div>
+        <button type="submit" (click)="setKomen()" class="btn btn-primary">Komentar</button></li>
+</ul>
+

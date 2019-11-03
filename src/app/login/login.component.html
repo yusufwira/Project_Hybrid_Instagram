@@ -1,0 +1,27 @@
+
+  <div class="col-md-6 cons">
+  <label class="title">Instantgram</label><br><br>
+  
+
+  <div class="form-group">
+    <input type="text" (input)="checkInputUsername($event)" class="form-control username" id="exampleInputEmail1" placeholder="Username">
+  </div>
+  <div class="form-group">
+    <input type="password" (input)="checkInputPassword($event)" class="form-control password" id="exampleInputPassword1" placeholder="Password">
+  </div>
+
+  <button *ngIf='tampilan;  else elseBlock' type="submit" (click)="test()" class=" btn btn-primary" routerLink="/home/{{tampilan}}" [disabled]="btnDisable">Login</button>
+   <ng-template #elseBlock><button type="submit" (click)="test()" class=" btn btn-primary" routerLink="/" [disabled]="btnDisable">Login</button></ng-template>
+
+
+   <!-- <button (click)="test()">baraaa</button> -->
+  <!-- <h2>{{tampilan}}</h2>  -->
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <p> Don't have an account ?</p><a href="">Sign Up</a>
+  </div>
+

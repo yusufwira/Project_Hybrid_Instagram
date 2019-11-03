@@ -1,0 +1,30 @@
+.cons{
+	top: 15vh;
+	padding: 30px;
+
+}
+
+
+.title{
+	font-family: Brush Script MT;
+	font-size: 60px;
+}
+
+.btn{
+	width: 300px;
+	height: 45px;
+}
+
+.username{
+	width: 300px;
+	height: 45px;
+}
+.password{
+	width: 300px;
+	height: 45px;
+}
+
+.form-group{
+	text-align: center;
+}
+

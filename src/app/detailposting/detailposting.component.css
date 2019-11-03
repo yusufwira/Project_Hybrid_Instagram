@@ -1,0 +1,25 @@
+.card{
+/*	width: 1000px;
+	height: 300px;*/
+	margin-left: 5px;
+	margin-top: 30px;
+}
+
+.bran{
+	font-family: Brush Script MT;
+	font-size: 30px;
+	color: white;
+}
+
+span{
+	font-size: 30px;
+	margin-bottom: 30px;
+}
+
+.inp{
+	width: 300px;
+}
+
+.fonts{
+	font-size: 25px;
+}
